@@ -1,0 +1,63 @@
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+
+  &::placeholder {
+    color: transparent;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font-styles-for($primary-font-regular);
+  @include font-size(1.8);
+  background-color: $body-background-color;
+  color: $body-color;
+  position: relative;
+}
+
+h1,
+h2 {
+  @include font-size(6);
+}
+
+h3 {
+  @include font-size(4);
+}
+
+h4 {
+  @include font-size(3.5);
+}
+
+h5 {
+  @include font-size(3);
+}
+
+h6 {
+  @include font-size(2);
+}
+
+p {
+  line-height: 1.4;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: inherit;
+}

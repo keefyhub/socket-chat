@@ -1,0 +1,18 @@
+$_standard-font-family: 'Lato', sans-serif;
+
+$primary-font-regular: (
+  family: $_standard-font-family,
+  style: normal,
+  weight: 400
+);
+
+// Colours
+$_color-white: #fff;
+$_color-black: #232323;
+
+$transition-timing: .3s;
+
+$body-background-color: $_color-white;
+$body-color: $_color-black;
+
+$default-link-color: $_color-black;

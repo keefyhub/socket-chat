@@ -1,0 +1,53 @@
+$num-grid-col: 12;
+$grid-gutter-width: 40px;
+
+%grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  @extend %grid;
+
+  &--center {
+    justify-content: center;
+  }
+}
+
+%col {
+  flex-flow: column;
+}
+
+@for $i from 1 through $num-grid-col {
+  %col-#{$i} {
+    @extend %col;
+    width: percentage($i / $num-grid-col);
+  }
+
+  .col-#{$i} {
+    @extend %col-#{$i};
+  }
+
+  %col-push-#{$i} {
+    @extend %col;
+    margin-left: percentage($i / $num-grid-col);
+  }
+
+  .col-push-#{$i} {
+    @extend %col-push-#{$i};
+  }
+}
+
+.gutter-grid {
+  @extend %grid;
+  margin-left: -#{$grid-gutter-width};
+
+  @for $i from 1 through $num-grid-col {
+    .col-#{$i} {
+      $gutter-col-width: percentage($i / $num-grid-col);
+
+      margin-left: #{$grid-gutter-width};
+      width: calc(#{$gutter-col-width} - #{$grid-gutter-width});
+    }
+  }
+}
