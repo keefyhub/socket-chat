@@ -1,0 +1,55 @@
+@import 'wordpress-core-css/wordpress-core-css.css';
+
+.wysiwyg {
+  > *:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .underline {
+    border-bottom: 1px solid $body-color;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  a:not(.btn) {
+    color: $default-link-color;
+    text-decoration: none;
+    transition: opacity $transition-timing;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  ol li,
+  ul li {
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  ol {
+    li {
+      counter-increment: step-counter;
+    }
+
+    li::before {
+      color: $default-link-color;
+      content: counter(step-counter) ',';
+      font-weight: 600;
+      margin-right: 5px;
+    }
+  }
+
+  ul li::before {
+    background-color: $default-link-color;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    height: 2px;
+    margin-right: 10px;
+    padding: 4px;
+    position: relative;
+    top: -1px;
+    width: 2px;
+  }
+}

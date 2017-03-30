@@ -1,0 +1,35 @@
+@import 'reset-css/reset.css';
+
+input,
+select,
+textarea {
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
