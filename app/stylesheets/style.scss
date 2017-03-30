@@ -11,4 +11,6 @@
 @import 'objects/utilities',
         'objects/wrappers';
 
-@import 'components/wysiwyg';
+@import 'components/messages',
+        'components/page-header',
+        'components/wysiwyg';
