@@ -1,7 +1,7 @@
 (function($) {
   var socket = io();
   var typingTimer;
-  var doneTypingInterval = 5000;
+  var doneTypingInterval = 2000;
   var animationSpeed = 500;
   var escapeKey = 13;
 
@@ -46,10 +46,10 @@
   });
 
   socket.on('user is typing', function() {
-    $('.user-is-typing').addClass('active');
+    $('.notification').addClass('active');
   });
 
   socket.on('user is not typing', function() {
-    $('.user-is-typing').removeClass('active');
+    $('.notification').removeClass('active');
   });
 })(jQuery);
